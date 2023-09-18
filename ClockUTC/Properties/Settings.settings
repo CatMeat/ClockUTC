@@ -3,19 +3,19 @@
   <Profiles />
   <Settings>
     <Setting Name="Location" Type="System.Drawing.Point" Scope="User">
-      <Value Profile="(Default)">50, 50</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Callsign" Type="System.String" Scope="User">
-      <Value Profile="(Default)">N0CAL</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="DarkMode" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="FormBorderStyle" Type="System.Windows.Forms.FormBorderStyle" Scope="User">
-      <Value Profile="(Default)">None</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="TitleBar" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="TextColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />

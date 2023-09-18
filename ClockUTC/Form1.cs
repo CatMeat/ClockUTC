@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 //using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -20,11 +21,11 @@ namespace ClockUTC
         private void Form1_Load(object sender, EventArgs e)
         {
             Text = "Clock UTC v1.0";
-            Location = Properties.Settings.Default.Location;
-            FormBorderStyle = Properties.Settings.Default.FormBorderStyle;
-            Callsign = Properties.Settings.Default.Callsign;
+
+            CheckForInvalidSettings();
+
             labelCallsign.Text = Callsign;
-            TitleBar= Properties.Settings.Default.TitleBar;
+
             if (TitleBar)
             {
                 menuStrip1.Show();
@@ -33,11 +34,69 @@ namespace ClockUTC
             {
                 menuStrip1.Hide();
             }
-            TextColor = Properties.Settings.Default.TextColor;
-            BackgroundColor = Properties.Settings.Default.BackgroundColor;
+
             UpdateColors();
         }
-        
+
+        private void CheckForInvalidSettings()
+        {
+            try
+            {
+                Location = Properties.Settings.Default.Location;
+            }
+            catch (Exception)
+            {
+                Location = new Point(50, 50);
+            }
+
+            try
+            {
+                FormBorderStyle = Properties.Settings.Default.FormBorderStyle;
+            }
+            catch (Exception)
+            {
+                FormBorderStyle = FormBorderStyle.FixedSingle;
+            }
+
+            try
+            {
+                Callsign = Properties.Settings.Default.Callsign;
+            }
+            catch (Exception)
+            {
+                Callsign = "N0CALL";
+            }
+
+            if (string.IsNullOrEmpty(Callsign))  Callsign = "N0CALL"; 
+
+            try
+            {
+                TitleBar = Properties.Settings.Default.TitleBar;
+            }
+            catch (Exception)
+            {
+                TitleBar = true;
+            }
+
+            try
+            {
+                TextColor = Properties.Settings.Default.TextColor;
+            }
+            catch (Exception)
+            {
+                TextColor = SystemColors.ControlText;
+            }
+
+            try
+            {
+                BackgroundColor = Properties.Settings.Default.BackgroundColor;
+            }
+            catch (Exception)
+            {
+                BackgroundColor = SystemColors.Control;
+            }
+        }
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.Location = Location;
@@ -57,21 +116,15 @@ namespace ClockUTC
 
             UpdateLocalDateTime();
             UpdateUTCDateTime();
-
-            //Text = Properties.Settings.Default.Size.ToString();
-
-
         }
 
         private void UpdateLocalDateTime()
         {
             string formattedTime = localDateTime.ToString("HH:mm:ss");
             labelLocalTime.Text = formattedTime;
-            Console.WriteLine("Current time: " + formattedTime);
 
             string formattedDate = localDateTime.ToString("dddd, dd MMMM yyyy");
             labelLocalDate.Text = formattedDate;
-            Console.WriteLine("Current date: " + formattedDate);
         }
 
         private void ToggleTitleBar()
@@ -146,11 +199,9 @@ namespace ClockUTC
         {
             string formattedTime = utcDateTime.ToString("HH:mm:ss");
             labelUTCTime.Text = formattedTime;
-            Console.WriteLine("Current time: " + formattedTime);
 
             string formattedDate = utcDateTime.ToString("dddd, dd MMMM yyyy");
             labelUTCDate.Text = formattedDate;
-            Console.WriteLine("Current date: " + formattedDate);
         }
 
         private void backgroundToolStripMenuItem_Click(object sender, EventArgs e)

@@ -25,7 +25,6 @@ namespace ClockUTC.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("50, 50")]
         public global::System.Drawing.Point Location {
             get {
                 return ((global::System.Drawing.Point)(this["Location"]));
@@ -37,7 +36,7 @@ namespace ClockUTC.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("N0CAL")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Callsign {
             get {
                 return ((string)(this["Callsign"]));
@@ -49,7 +48,6 @@ namespace ClockUTC.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool DarkMode {
             get {
                 return ((bool)(this["DarkMode"]));
@@ -61,7 +59,6 @@ namespace ClockUTC.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("None")]
         public global::System.Windows.Forms.FormBorderStyle FormBorderStyle {
             get {
                 return ((global::System.Windows.Forms.FormBorderStyle)(this["FormBorderStyle"]));
@@ -73,7 +70,6 @@ namespace ClockUTC.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool TitleBar {
             get {
                 return ((bool)(this["TitleBar"]));
