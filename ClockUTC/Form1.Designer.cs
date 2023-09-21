@@ -41,11 +41,12 @@
             this.callsignToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.callsignToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelCallsign = new System.Windows.Forms.Label();
             this.colorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelCallsign = new System.Windows.Forms.Label();
+            this.stayOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxLocal.SuspendLayout();
             this.groupBoxUTC.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -55,8 +56,7 @@
             // 
             this.labelLocalTime.AutoSize = true;
             this.labelLocalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLocalTime.Location = new System.Drawing.Point(8, 20);
-            this.labelLocalTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLocalTime.Location = new System.Drawing.Point(6, 16);
             this.labelLocalTime.Name = "labelLocalTime";
             this.labelLocalTime.Size = new System.Drawing.Size(182, 46);
             this.labelLocalTime.TabIndex = 0;
@@ -74,11 +74,9 @@
             this.groupBoxLocal.Controls.Add(this.labelLocalDate);
             this.groupBoxLocal.Controls.Add(this.labelLocalTime);
             this.groupBoxLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxLocal.Location = new System.Drawing.Point(16, 112);
-            this.groupBoxLocal.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxLocal.Location = new System.Drawing.Point(12, 91);
             this.groupBoxLocal.Name = "groupBoxLocal";
-            this.groupBoxLocal.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxLocal.Size = new System.Drawing.Size(256, 105);
+            this.groupBoxLocal.Size = new System.Drawing.Size(192, 85);
             this.groupBoxLocal.TabIndex = 1;
             this.groupBoxLocal.TabStop = false;
             this.groupBoxLocal.Text = "Local Time";
@@ -87,8 +85,7 @@
             // labelLocalDate
             // 
             this.labelLocalDate.AutoSize = true;
-            this.labelLocalDate.Location = new System.Drawing.Point(8, 76);
-            this.labelLocalDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLocalDate.Location = new System.Drawing.Point(6, 62);
             this.labelLocalDate.Name = "labelLocalDate";
             this.labelLocalDate.Size = new System.Drawing.Size(41, 13);
             this.labelLocalDate.TabIndex = 1;
@@ -101,11 +98,9 @@
             this.groupBoxUTC.Controls.Add(this.labelUTCDate);
             this.groupBoxUTC.Controls.Add(this.labelUTCTime);
             this.groupBoxUTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxUTC.Location = new System.Drawing.Point(280, 112);
-            this.groupBoxUTC.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxUTC.Location = new System.Drawing.Point(210, 91);
             this.groupBoxUTC.Name = "groupBoxUTC";
-            this.groupBoxUTC.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxUTC.Size = new System.Drawing.Size(256, 105);
+            this.groupBoxUTC.Size = new System.Drawing.Size(192, 85);
             this.groupBoxUTC.TabIndex = 2;
             this.groupBoxUTC.TabStop = false;
             this.groupBoxUTC.Text = "UTC Time";
@@ -114,8 +109,7 @@
             // labelUTCDate
             // 
             this.labelUTCDate.AutoSize = true;
-            this.labelUTCDate.Location = new System.Drawing.Point(8, 76);
-            this.labelUTCDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelUTCDate.Location = new System.Drawing.Point(6, 62);
             this.labelUTCDate.Name = "labelUTCDate";
             this.labelUTCDate.Size = new System.Drawing.Size(41, 13);
             this.labelUTCDate.TabIndex = 1;
@@ -127,8 +121,7 @@
             // 
             this.labelUTCTime.AutoSize = true;
             this.labelUTCTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUTCTime.Location = new System.Drawing.Point(8, 20);
-            this.labelUTCTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelUTCTime.Location = new System.Drawing.Point(6, 16);
             this.labelUTCTime.Name = "labelUTCTime";
             this.labelUTCTime.Size = new System.Drawing.Size(182, 46);
             this.labelUTCTime.TabIndex = 0;
@@ -142,7 +135,8 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(549, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(412, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -158,7 +152,8 @@
             // 
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.callsignToolStripMenuItem1,
-            this.colorsToolStripMenuItem});
+            this.colorsToolStripMenuItem,
+            this.stayOnTopToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.settingsToolStripMenuItem.Text = "&Settings";
@@ -169,25 +164,6 @@
             this.callsignToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.callsignToolStripMenuItem1.Text = "&Callsign";
             this.callsignToolStripMenuItem1.Click += new System.EventHandler(this.callsignToolStripMenuItem1_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.exitToolStripMenuItem.Text = "&Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // labelCallsign
-            // 
-            this.labelCallsign.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelCallsign.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCallsign.Location = new System.Drawing.Point(0, 24);
-            this.labelCallsign.Name = "labelCallsign";
-            this.labelCallsign.Size = new System.Drawing.Size(549, 81);
-            this.labelCallsign.TabIndex = 4;
-            this.labelCallsign.Text = "label1";
-            this.labelCallsign.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelCallsign.DoubleClick += new System.EventHandler(this.labelCallsign_DoubleClick);
             // 
             // colorsToolStripMenuItem
             // 
@@ -212,11 +188,38 @@
             this.textColorToolStripMenuItem.Text = "TextColor";
             this.textColorToolStripMenuItem.Click += new System.EventHandler(this.textColorToolStripMenuItem_Click);
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.exitToolStripMenuItem.Text = "&Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // labelCallsign
+            // 
+            this.labelCallsign.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelCallsign.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCallsign.Location = new System.Drawing.Point(0, 24);
+            this.labelCallsign.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCallsign.Name = "labelCallsign";
+            this.labelCallsign.Size = new System.Drawing.Size(412, 66);
+            this.labelCallsign.TabIndex = 4;
+            this.labelCallsign.Text = "label1";
+            this.labelCallsign.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelCallsign.DoubleClick += new System.EventHandler(this.labelCallsign_DoubleClick);
+            // 
+            // stayOnTopToolStripMenuItem
+            // 
+            this.stayOnTopToolStripMenuItem.Name = "stayOnTopToolStripMenuItem";
+            this.stayOnTopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stayOnTopToolStripMenuItem.Text = "Stay On Top";
+            this.stayOnTopToolStripMenuItem.Click += new System.EventHandler(this.stayOnTopToolStripMenuItem_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 230);
+            this.ClientSize = new System.Drawing.Size(412, 187);
             this.Controls.Add(this.labelCallsign);
             this.Controls.Add(this.groupBoxUTC);
             this.Controls.Add(this.groupBoxLocal);
@@ -224,7 +227,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(50, 50);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Clock UTC";
@@ -260,6 +262,7 @@
         private System.Windows.Forms.ToolStripMenuItem colorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem backgroundToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem textColorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stayOnTopToolStripMenuItem;
     }
 }
 

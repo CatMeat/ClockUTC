@@ -95,6 +95,15 @@ namespace ClockUTC
             {
                 BackgroundColor = SystemColors.Control;
             }
+
+            try
+            {
+                stayOnTopToolStripMenuItem.Checked = Properties.Settings.Default.StayOnTop;
+            }
+            catch (Exception)
+            {
+                stayOnTopToolStripMenuItem.Checked = false;
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -104,7 +113,8 @@ namespace ClockUTC
             Properties.Settings.Default.Callsign=Callsign;
             Properties.Settings.Default.TitleBar=TitleBar;
             Properties.Settings.Default.BackgroundColor=BackgroundColor;
-            Properties.Settings.Default.TextColor=TextColor;
+            Properties.Settings.Default.TextColor = TextColor;
+            Properties.Settings.Default.StayOnTop = stayOnTopToolStripMenuItem.Checked;
 
             Properties.Settings.Default.Save();
         }
@@ -113,7 +123,7 @@ namespace ClockUTC
         {
             localDateTime = DateTime.Now;
             utcDateTime = localDateTime.ToUniversalTime();
-
+            if (stayOnTopToolStripMenuItem.Checked) { TopMost = true; } else { TopMost = false; }
             UpdateLocalDateTime();
             UpdateUTCDateTime();
         }
@@ -221,6 +231,18 @@ namespace ClockUTC
             {
                 TextColor = colorDlg.Color;
                 UpdateColors();
+            }
+        }
+
+        private void stayOnTopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (stayOnTopToolStripMenuItem.Checked)
+            {
+                stayOnTopToolStripMenuItem.Checked = false; 
+            }
+            else
+            {
+                stayOnTopToolStripMenuItem.Checked = true;
             }
         }
 

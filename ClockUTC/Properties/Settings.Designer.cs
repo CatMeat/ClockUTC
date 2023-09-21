@@ -100,5 +100,17 @@ namespace ClockUTC.Properties {
                 this["BackgroundColor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool StayOnTop {
+            get {
+                return ((bool)(this["StayOnTop"]));
+            }
+            set {
+                this["StayOnTop"] = value;
+            }
+        }
     }
 }
